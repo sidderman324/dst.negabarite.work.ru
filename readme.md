@@ -18,6 +18,8 @@ Deploy в GH-pages
 
 Для работы BrowserSync с php файлами необходимо добавить в домены OS папку build и указать доменное имя сайта в gulpfile.js (Строка ~215).
 
+Имя домена для Open Server <kbd>dst.negabarite.work.ru</kbd>
+
 Запуск конкретной задачи: `npm start имя_задачи` (список задач смотри в `gulpfile.js`)
 
 Остановка: <kbd>Ctrl + C</kbd>

@@ -1,0 +1,66 @@
+// Для импорта в диспетчер подключений: @import './src/less/blocks/type.less';
+
+.type {
+  background-color: @gray-color;
+  @media (min-width: @screen-xs) and (max-width: @screen-sm) {
+    display: none;
+  }
+
+  &__inner {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (min-width: @screen-sm) and (max-width: @screen-md) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
+    height: 100%;
+    text-decoration: none;
+    padding-top: 20px;
+    text-align: center;
+    width: 12.5%;
+    @media (min-width: @screen-sm) and (max-width: @screen-md) {
+      width: 25%;
+      padding-top: 10px;
+    }
+
+    &:hover {
+      box-shadow: 0 0px 10px rgba(0,0,0,.5);
+    }
+  }
+
+  &__item:hover .type__title {
+    color: @yellow-color;
+    transition: 0.3s;
+  }
+
+  &__img {
+    width: 150px;
+    height: 126px;
+    @media (min-width: 992px) {
+      width: 121px;
+      height: 102px;
+    }
+    @media (min-width: @screen-sm) and (max-width: @screen-md) {
+      width: 89px;
+      height: 75px;
+    }
+  }
+
+  &__title {
+    font-size: 14px;
+    color: @white-color;
+    text-align: center;
+    transition: 0.3s;
+
+    @media (min-width: 992px) {
+      font-size: 12px;
+    }
+  }
+}

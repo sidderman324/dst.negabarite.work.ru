@@ -1,0 +1,116 @@
+// Для импорта в диспетчер подключений: @import './src/less/blocks/main-menu.less';
+
+
+.main-menu {
+  background-color: @black-color;
+  text-align: center;
+  @media (min-width: @screen-xs) and (max-width: @screen-sm) {
+    display: none;
+    padding-bottom: 15px;
+  }
+
+  &__list {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0 150px;
+    @media (min-width: 768px) {
+      padding: 0 50px;
+    }
+    @media (min-width: @screen-xs) and (max-width: @screen-sm) {
+      padding: 0;
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+  &__item {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    @media (min-width: @screen-sm) {
+      &:hover .submenu{
+        height: auto;
+        transition: 0.3s;
+      }
+    }
+
+  }
+  &__link {
+    font-size: 16px;
+    line-height: 39px;
+    color: @white-color;
+    text-decoration: none;
+  }
+
+  &__btn {
+    .btn_white;
+    display: none;
+    margin: 15px auto 0px auto;
+    @media (min-width: @screen-xs) and (max-width: @screen-sm) {
+      display: block;
+    }
+  }
+  &__phone {
+    display: none;
+    font-size: 16px;
+    color: @light-gray-color;
+    text-decoration: none;
+    position: relative;
+    margin: 30px 0 10px 0;
+    &:before {
+      content: '';
+      display: inline-block;
+      background-image: url('/img/icon_phone-gray.png');
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: -25px;
+      width: 17px;
+      height: 17px;
+      background-size: contain;
+    }
+    @media (min-width: @screen-xs) and (max-width: @screen-sm) {
+      display: inline-block;
+    }
+  }
+
+  &__marker {
+    display: inline-block;
+    height: 39px;
+    width: 59px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+
+    @media (min-width: @screen-sm) {
+      display: none;
+    }
+
+    &:after {
+      content: '';
+      display: inline-block;
+      height: 15px;
+      width: 15px;
+      border-left: 1px solid @yellow-color;
+      border-bottom: 1px solid @yellow-color;
+      position: absolute;
+      top: 7px;
+      right: 7px;
+      transform: rotate(-45deg);
+      transition: 0.3s;
+    }
+    &--active {
+      &:after {
+        transform: rotate(135deg);
+        top: 14px;
+        transition: 0.3s;
+      }
+    }
+
+  }
+}

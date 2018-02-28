@@ -1,0 +1,40 @@
+// Для импорта в диспетчер подключений: @import '/blocks/logo.less';
+
+
+.logo {
+  width: 80px;
+  text-decoration: none;
+
+  &__title {
+    font-size: 16px;
+    text-transform: uppercase;
+    text-align: center;
+    color: @black-color;
+    &:first-child {
+      margin-bottom: 27px;
+      position: relative;
+      @media (min-width: @screen-xs) and (max-width: @screen-sm) {
+        margin-bottom: 22px;
+      }
+
+      &:after {
+        content: '';
+        display: inline-block;
+        width: 77px;
+        height: 20px;
+        background-image: repeating-linear-gradient(-45deg, @black-color, @black-color 8px, @yellow-color 8px, @yellow-color 14px);
+        left: 0;
+        bottom: -24px;
+        position: absolute;
+        @media (min-width: @screen-xs) and (max-width: @screen-sm) {
+          height: 16px;
+          bottom: -19px;
+        }
+      }
+    }
+    @media (min-width: @screen-xs) and (max-width: @screen-sm) {
+      font-size: 16px;
+    }
+
+  }
+}

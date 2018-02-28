@@ -1,0 +1,62 @@
+// Для импорта в диспетчер подключений: @import './src/less/blocks/submenu.less';
+
+.submenu {
+  background-color: @black-color;
+  position: absolute;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 0;
+  overflow: hidden;
+  z-index: 9999;
+  transition: 0.6s;
+
+  @media (min-width: @screen-xs) and (max-width: @screen-sm) {
+    position: relative;
+    display: none;
+    height: auto;
+    border-top: 1px dotted @gray-color;
+    border-bottom: 1px dotted @gray-color;
+    transition: top 1s ease-out 0.5s;
+    width: 100%;
+  }
+
+  &--wide {
+    width: 200px;
+  }
+
+  &__item {
+    color: @black-color;
+    font-size: 12px;
+    border: 0;
+    list-style-type: none;
+    padding: 0 20px;
+
+    &:first-of-type {
+      margin-top: 5px;
+    }
+
+    &:last-of-type {
+      margin-bottom: 10px;
+    }
+  }
+  &__link {
+    text-decoration: none;
+    color: @light-gray-color;
+    font-size: 16px;
+    outline: none;
+    line-height: 28px;
+    width: 100%;
+    display: block;
+    &:hover {
+      text-decoration: underline;
+    }
+    @media (min-width: @screen-xs) and (max-width: @screen-sm) {
+      font-size: 14px;
+      line-height: 30px;
+    }
+  }
+}

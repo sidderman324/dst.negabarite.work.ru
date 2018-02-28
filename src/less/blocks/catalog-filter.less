@@ -1,0 +1,86 @@
+// Для импорта в диспетчер подключений: @import './src/less/blocks/catalog-filter.less';
+
+
+.catalog-filter {
+  padding-left: 110px;
+  padding-top: 30px;
+  flex-basis: 25%;
+  position: relative;
+  z-index: 999;
+  @media (min-width: @screen-md) and (max-width: @screen-lg) {
+    padding-left: 70px;
+  }
+  @media (min-width: @screen-sm) and (max-width: @screen-md) {
+    padding-left: 0;
+  }
+  @media (min-width: @screen-xs) and (max-width: @screen-sm) {
+    padding-left: 0;
+    position: fixed;
+    flex: 100%;
+    background-color: @white-color;
+    left: -220px;
+    bottom: 5%;
+    width: 220px;
+    padding: 20px 30px;
+    box-shadow: 0 0 10px 0 rgba(204, 204, 204, 1);
+  }
+  &__sticker {
+    transform: rotate(-90deg) translatex(50%);
+    position: absolute;
+    font-size: 16px;
+    background-color: @yellow-color;
+    color: @black-color;
+    line-height: 35px;
+    font-weight: bold;
+    padding: 0px 15px;
+    padding-bottom: 3px;
+    left: 164px;
+    top: 50%;
+    display: inline-block;
+    width: 150px;
+    text-align: center;
+    cursor: pointer;
+    display: none;
+    @media (min-width: @screen-xs) and (max-width: @screen-sm) {
+      display: block;
+    }
+  }
+
+  &__title {
+    font-size: 18px;
+    color: @yellow-color;
+    padding-bottom: 18px;
+    margin-bottom: 5px;
+    position: relative;
+    &:after {
+      content: '';
+      display: inline-block;
+      width: 28px;
+      height: 2px;
+      background-color: @yellow-color;
+      position: absolute;
+      bottom: 0;
+      left: -15px;
+    }
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+  }
+  &__item {
+    list-style-type: none;
+  }
+  &__link {
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 22px;
+    color: @black-color;
+    &:hover {
+      text-decoration: underline;
+    }
+    &--active {
+      color: @yellow-color;
+    }
+  }
+}

@@ -1,0 +1,133 @@
+// Для импорта в диспетчер подключений: @import './src/less/blocks/page-footer.less';
+
+.page-footer {
+  padding: 40px 0 30px;
+  background-color: @black-color;
+
+  &__inner {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  &__column {
+    width: 33%;
+    @media (min-width: @screen-xs) and (max-width: @screen-sm) {
+      display: none;
+
+      &:last-of-type {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: @light-gray-color;
+    font-size: 14px;
+    display: block;
+    position: relative;
+    margin-bottom: 20px;
+  }
+
+  &__copyright {
+    margin-top: 40px;
+
+    &-text {
+      color: @light-gray-color;
+      font-size: 14px;
+      text-transform: uppercase;
+      @media (min-width: @screen-xs) and (max-width: @screen-sm) {
+        font-size: 12px;
+      }
+    }
+
+    &-author {
+      color: @light-gray-color;
+      font-size: 14px;
+      text-decoration: none;
+      @media (min-width: @screen-xs) and (max-width: @screen-sm) {
+        font-size: 12px;
+      }
+    }
+  }
+
+  &__phone {
+    color: @gray-color;
+    font-size: 14px;
+    text-decoration: none;
+    display: block;
+    text-indent: 25px;
+    margin-bottom: 5px;
+    position: relative;
+
+    &:before {
+      content: '';
+      display: inline-block;
+      background-image: url("/img/icon_phone-gray.png");
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      width: 15px;
+      height: 15px;
+      background-size: contain;
+      @media (min-width: @screen-xs) and (max-width: @screen-sm) {
+        top: 23%;
+      }
+    }
+  }
+
+  &__mail {
+    color: @gray-color;
+    font-size: 14px;
+    text-decoration: none;
+    display: block;
+    text-indent: 25px;
+    margin-bottom: 5px;
+    position: relative;
+
+    &:before {
+      content: '';
+      display: inline-block;
+      background-image: url("/img/icon_mail-1-gray.png");
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      width: 15px;
+      height: 15px;
+      background-size: contain;
+      @media (min-width: @screen-xs) and (max-width: @screen-sm) {
+        top: 10px;
+      }
+    }
+  }
+
+  &__address {
+    color: @gray-color;
+    font-size: 14px;
+    text-decoration: none;
+    display: block;
+    text-indent: 25px;
+    margin-bottom: 5px;
+    position: relative;
+
+    &:before {
+      content: '';
+      display: inline-block;
+      background-image: url("/img/icon_placemarker-gray.png");
+      position: absolute;
+      top: 25%;
+      transform: translateY(-50%);
+      left: 0;
+      width: 15px;
+      height: 15px;
+      background-size: contain;
+    }
+  }
+}

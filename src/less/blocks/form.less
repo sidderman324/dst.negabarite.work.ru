@@ -1,0 +1,123 @@
+// Для импорта в диспетчер подключений: @import './src/less/blocks/form.less';
+
+
+.form {
+  @media (min-width: @screen-xs) and (max-width: @screen-sm) {
+    padding-bottom: 30px;
+  }
+  .container {
+
+  }
+  &__inner {
+    height: auto;
+    padding: 26px 52px;
+    margin: 0 110px 150px 110px;
+    background-color: @light-gray-color;
+    text-align: center;
+    @media (min-width: @screen-md) and (max-width: @screen-lg) {
+      margin: 0 70px 50px 70px;
+    }
+    @media (min-width: @screen-xs) and (max-width: @screen-md) {
+      margin: 0;
+    }
+  }
+  &__title-wrapper {
+    flex-basis: 100%;
+    margin: 0 110px 50px 110px;
+    @media (min-width: @screen-md) and (max-width: @screen-lg) {
+      margin: 0 70px 50px 70px;
+    }
+    @media (min-width: @screen-xs) and (max-width: @screen-md) {
+      margin: 0;
+      margin-bottom: 20px;
+    }
+  }
+  &__title {
+    .spec_title;
+  }
+  &__row {
+    width: 50%;
+    margin-bottom: 26px;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    @media (min-width: @screen-md) and (max-width: @screen-lg) {
+      width: 60%;
+    }
+    @media (min-width: @screen-sm) and (max-width: @screen-md) {
+      width: 80%;
+    }
+    @media (min-width: @screen-xs) and (max-width: @screen-sm) {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    &--wide {
+      width: 80%;
+      flex-wrap: nowrap;
+      @media (min-width: @screen-md) and (max-width: @screen-lg) {
+        width: 90%;
+      }
+      @media (min-width: @screen-sm) and (max-width: @screen-md) {
+        width: 100%;
+      }
+    }
+    @media (min-width: @screen-xs) and (max-width: @screen-sm) {
+      flex-direction: column;
+    }
+  }
+  &__text {
+    font-size: 16px;
+    color: @black-color;
+    text-align: left;
+    @media (min-width: @screen-xs) and (max-width: @screen-sm) {
+      margin-bottom: 10px;
+      text-align: center;
+    }
+  }
+  &__input {
+    width: 278px;
+    border: 0;
+    line-height: 40px;
+    font-size: 16px;
+    // height: 27px;
+    outline: none;
+    padding-left: 10px;
+    @media (min-width: @screen-xs) and (max-width: @screen-sm) {
+      width: 100%;
+    }
+    &--big {
+      width: 532px;
+      height: 180px;
+      @media (min-width: @screen-sm) and (max-width: @screen-md) {
+        width: 500px;
+        height: 140px;
+      }
+      @media (min-width: @screen-xs) and (max-width: @screen-sm) {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+  &__submit {
+    .btn_yellow;
+    @media (min-width: @screen-xs) and (max-width: @screen-sm) {
+      width: 200px;
+      height: 40px;
+      line-height: 35px;
+    }
+  }
+  &__btn-upload {
+    .btn_black;
+    margin-left: auto;
+    margin-top: 26px;
+    @media (min-width: @screen-xs) and (max-width: @screen-sm) {
+      width: 200px;
+      height: 40px;
+      line-height: 35px;
+    }
+  }
+}

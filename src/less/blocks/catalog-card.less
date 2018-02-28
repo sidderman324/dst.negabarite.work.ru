@@ -1,0 +1,124 @@
+// Для импорта в диспетчер подключений: @import './src/less/blocks/catalog-card.less';
+
+.catalog-card {
+  flex-basis: 24%;
+  margin: 5px 0.5%;
+  background-color: @light-gray-color;
+  text-decoration: none;
+  padding-bottom: 10px;
+  text-align: center;
+  @media (min-width: @screen-xs) and (max-width: @screen-sm) {
+    flex-basis: 48%;
+    margin: 5px 1%;
+  }
+
+  &:hover {
+    box-shadow: 0 0 20px 0 rgba(204, 204, 204, 1);
+  }
+
+  &:hover .catalog-card__text {
+    color: @yellow-color;
+    transition: 0.3s;
+  }
+
+  &:hover .catalog-card__text--normal {
+    color: @black-color;
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+  }
+  &--wide {
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+
+    &:hover .catalog-card__text {
+      color: @black-color;
+      transition: 0.3s;
+    }
+
+    .catalog-card__img {
+      width: 33%;
+      height: auto;
+      margin-right: 50px;
+    }
+    .catalog-card__text {
+      display: inline-block;
+      width: auto;
+      margin: 0;
+      font-weight: normal;
+      position: relative;
+
+      &:after {
+        content: '/';
+        display: inline-block;
+        padding: 0 8px;
+      }
+    }
+    .catalog-card__type {
+      display: none;
+    }
+  }
+
+  &__text {
+    text-decoration: none;
+    color: @black-color;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: bold;
+    transition: 0.3s;
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+
+    &--normal {
+      font-weight: normal;
+    }
+    @media (min-width: @screen-sm) and (max-width: @screen-md) {
+      width: 80%;
+    }
+    @media (min-width: @screen-xs) and (max-width: @screen-sm) {
+      width: 100%;
+      font-size: 14px;
+    }
+  }
+
+  &__type {
+    font-size: 12px;
+    line-height: 18px;
+    color: @gray-color;
+  }
+
+  &__price {
+    color: @black-color;
+    font-size: 16px;
+    line-height: 24px;
+    // height: 24px;
+    display: inline-block;
+    position: relative;
+
+    &:after {
+      content: '';
+      display: inline-block;
+      background-image: url("/img/rouble_icon.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      height: 20px;
+      width: 24px;
+      position: absolute;
+      right: -25px;
+      top: 50%;
+      transform: translateY(-50%);
+      @media (min-width: @screen-xs) and (max-width: @screen-sm) {
+        height: 16px;
+      }
+    }
+    @media (min-width: @screen-xs) and (max-width: @screen-sm) {
+      font-size: 14px;
+    }
+  }
+}

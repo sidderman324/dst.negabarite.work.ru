@@ -211,7 +211,7 @@ gulp.task('build', gulp.series(                             // последов�
 gulp.task('serve', gulp.series('build', function() {
 
   browserSync.init({                                        // запускаем локальный сервер (показ, автообновление, синхронизацию)
-    proxy: "domain-name.work.ru",
+    proxy: "dst.negabarite.work.ru",
     port: 3000,                                             // порт, на котором будет работать сервер
   });
 

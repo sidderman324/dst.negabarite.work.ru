@@ -1,0 +1,35 @@
+// Для импорта в диспетчер подключений: @import './src/less/blocks/pagination.less';
+
+.pagination {
+  padding: 0 35px 30px;
+  margin-left: 25%;
+  @media (min-width: @screen-xs) and (max-width: @screen-sm) {
+    margin: 0 auto;
+  }
+
+  .jp-current {
+    color: @yellow-color;
+  }
+
+  a {
+    display: inline-block;
+    padding: 0 5px;
+    font-size: 16px;
+    line-height: 20px;
+    color: @black-color;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .jp-previous {
+    @media (min-width: @screen-xs) and (max-width: @screen-sm) {
+      display: none;
+    }
+  }
+
+  .jp-next {
+    @media (min-width: @screen-xs) and (max-width: @screen-sm) {
+      display: none;
+    }
+  }
+}

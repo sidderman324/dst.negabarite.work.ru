@@ -1,0 +1,156 @@
+/* Прозрачная кнопка */
+
+.btn_transparent() {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 35px;
+  width: 200px;
+  height: 40px;
+  color: @black-color;
+  border: 2px solid @black-color;
+  text-decoration: none;
+  text-align: center;
+  transition: 0.3s;
+  overflow: hidden;
+  &:hover {
+    color: @yellow-color;
+    border: 2px solid @yellow-color;
+    transition: 0.3s;
+  }
+  @media (min-width: @screen-xs) and (max-width: @screen-sm) {
+    width: 100px;
+    height: 30px;
+    line-height: 25px;
+  }
+}
+
+.btn_white() {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 35px;
+  width: 200px;
+  height: 40px;
+  color: @light-gray-color;
+  border: 2px solid @light-gray-color;
+  text-decoration: none;
+  text-align: center;
+  transition: 0.3s;
+  &:hover {
+    color: @gray-color;
+    border: 2px solid @gray-color;
+    transition: 0.3s;
+  }
+}
+
+.btn_black() {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 35px;
+  width: 200px;
+  height: 40px;
+  color: @light-gray-color;
+  border: 2px solid @black-color;
+  background-color: @black-color;
+  text-decoration: none;
+  text-align: center;
+  transition: 0.3s;
+  &:hover {
+    color: @black-color;
+    background-color: transparent;
+    border: 2px solid @black-color;
+    transition: 0.3s;
+  }
+}
+
+
+.btn_yellow() {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 35px;
+  width: 200px;
+  height: 40px;
+  color: @black-color;
+  background-color: @yellow-color;
+  border: 2px solid @yellow-color;
+  text-decoration: none;
+  text-align: center;
+  transition: 0.3s;
+  &:hover {
+    color: @white-color;
+    border: 2px solid @gray-color;
+    background-color: @gray-color;
+    transition: 0.3s;
+  }
+  @media (min-width: @screen-xs) and (max-width: @screen-sm) {
+    width: 100px;
+    height: 30px;
+    line-height: 25px;
+  }
+}
+
+.spec_title() {
+  font-size: 24px;
+  color: @black-color;
+  text-transform: uppercase;
+  padding-left: 18px;
+  padding-right: 8px;
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  &:before {
+    content: '';
+    display: inline-block;
+    height: 22px;
+    width: 4px;
+    background-color: @yellow-color;
+    position: absolute;
+    top: 3px;
+    left: 0;
+  }
+  &:after {
+    content: '.';
+    color: @yellow-color;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: inline-block;
+    height: 2px;
+    width: 2px;
+  }
+}
+
+.spec_subtitle() {
+  font-size: 14px;
+  color: @black-color;
+  text-transform: uppercase;
+}
+
+.placement_marker_yellow() {
+  &:before {
+    content: '';
+    display: inline-block;
+    background-image: url("/img/icon_placemarker-yellow.png");
+    position: absolute;
+    top: 10px;
+    transform: translateY(-50%);
+    left: -25px;
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+  }
+}
+
+.placement_marker_black() {
+  &:before {
+    content: '';
+    display: inline-block;
+    background-image: url("/img/icon_placemarker-black.png");
+    position: absolute;
+    top: 10px;
+    transform: translateY(-50%);
+    left: -25px;
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+  }
+}

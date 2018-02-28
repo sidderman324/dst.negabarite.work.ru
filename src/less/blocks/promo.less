@@ -1,0 +1,90 @@
+// Для импорта в диспетчер подключений: @import './src/less/blocks/promo.less';
+
+.promo {
+  height: 500px;
+  position: relative;
+  @media (min-width: @screen-xs) and (max-width: @screen-sm) {
+    height: 300px;
+  }
+
+  .container {
+    height: 100%;
+  }
+
+  &__item-excavator {
+    background-image: url("../img/promo_excavator.png");
+    height: 100%;
+    padding-left: 110px;
+    padding-top: 100px;
+    background-size: cover;
+    background-position: center;
+    @media (min-width: 768px) {
+      padding-left: 0;
+      padding-top: 0;
+    }
+    @media (min-width: @screen-xs) and (max-width: @screen-sm) {
+      padding-left: 0;
+      padding-top: 0;
+    }
+  }
+
+  &__text-box {
+    padding-top: 90px;
+    padding-left: 80px;
+    @media (min-width: @screen-sm) and (max-width: @screen-lg) {
+      padding-top: 70px;
+      padding-left: 0px;
+    }
+    @media (min-width: @screen-xs) and (max-width: @screen-sm) {
+      padding-top: 40px;
+      padding-left: 0;
+      text-align: center;
+    }
+  }
+
+  &__title {
+    font-size: 40px;
+    text-transform: uppercase;
+    color: @black-color;
+    margin-bottom: 10px;
+    @media (min-width: @screen-xs) and (max-width: @screen-sm) {
+      font-size: 26px;
+    }
+  }
+
+  &__text {
+    font-size: 24px;
+    color: @black-color;
+    text-align: left;
+    line-height: 28px;
+    @media (min-width: @screen-xs) and (max-width: @screen-sm) {
+      font-size: 18px;
+      text-align: center;
+    }
+  }
+
+  &__btn-wrapper {
+    margin-top: 32px;
+  }
+
+  &__btn {
+    .btn_transparent;
+
+    &--yellow {
+      .btn_yellow;
+      margin-right: 32px;
+      @media (min-width: @screen-xs) and (max-width: @screen-sm) {
+        margin-right: 20px;
+      }
+    }
+  }
+
+  &__mask {
+    height: 100%;
+    display: block;
+    z-index: 100;
+    @media (min-width: @screen-xs) and (max-width: @screen-sm) {
+      background-color: rgba(255,255,255,.6);
+    }
+  }
+}

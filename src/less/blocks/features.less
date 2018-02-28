@@ -1,0 +1,50 @@
+// Для импорта в диспетчер подключений: @import './src/less/blocks/features.less';
+
+
+.features {
+    // width: 67%;
+
+  &__title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+    color: @black-color;
+    margin-bottom: 25px;
+    line-height: 22px;
+    @media (min-width: @screen-xs) and (max-width: @screen-sm) {
+      text-align: center;
+    }
+  }
+  &__item {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    margin: 0 auto;
+  }
+  &__name {
+    font-size: 16px;
+    color: @gray-color;
+    line-height: 25px;
+    display: inline-block;
+    &:after {
+      content: ':';
+      display: inline-block;
+    }
+    @media (min-width: @screen-xs) and (max-width: @screen-sm) {
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+  &__value {
+    font-size: 16px;
+    color: @black-color;
+    line-height: 25px;
+    display: inline-block;
+    margin-left: 10px;
+    @media (min-width: @screen-xs) and (max-width: @screen-sm) {
+      font-size: 14px;
+      line-height: 18px;
+      font-weight: bold;
+    }
+  }
+}

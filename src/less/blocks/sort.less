@@ -1,0 +1,53 @@
+// Для импорта в диспетчер подключений: @import './src/less/blocks/sort.less';
+
+.sort {
+  flex-basis: 75%;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 40px;
+  padding-top: 25px;
+  height: 100%;
+  margin-left: auto;
+
+  &__item {
+    &:last-of-type {
+      display: flex;
+      flex-direction: row;
+    }
+    .location {
+      margin-left: 20px;
+      background-color: @white-color;
+    }
+  }
+
+  &__text {
+    display: inline-block;
+    font-size: 16px;
+    line-height: 20px;
+    color: @black-color;
+    padding-right: 5px;
+    @media (min-width: @screen-sm) and (max-width: @screen-md) {
+      font-size: 13px;
+    }
+    @media (min-width: @screen-xs) and (max-width: @screen-sm) {
+      display: none;
+    }
+
+    &--active {
+      color: @yellow-color;
+    }
+
+    &--separator {
+
+      &:after {
+        content: '/';
+        color: @black-color;
+        position: relative;
+        right: -3px;
+      }
+    }
+  }
+}

@@ -1,4 +1,5 @@
 * {
+  // font-family: 'ralewayregular', sans-serif;
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
@@ -16,17 +17,11 @@ h1 {
 body {
   width: 100%;
   max-width: 100%;
-  overflow: hidden;
-  font-size: 16px;
+  // overflow-x: hidden;
+  font-size: 10px;
   position: relative;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'PT Sans', sans-serif;
   transition: 0.3s;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  @media(min-width: @screen-lg) and (-webkit-min-device-pixel-ratio: 1.2) {
-    font-size: 14px;
-  }
 }
 
 .container {
@@ -34,9 +29,10 @@ body {
   margin: 0 auto;
   width: @screen-lg;
   box-sizing: border-box;
+  // position: relative;
+  // overflow: hidden;
   @media(min-width: @screen-xs) {
-    width: 90%;
-    min-width: @screen-xs;
+    width: @screen-xs;
   }
   @media(min-width: @screen-sm) {
     width: @screen-sm;
@@ -47,4 +43,9 @@ body {
   @media(min-width: @screen-lg) {
     width: @screen-lg;
   }
+}
+
+.page-title {
+  font-weight: normal;
+  margin: 0;
 }

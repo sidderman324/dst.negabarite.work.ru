@@ -1,0 +1,81 @@
+// Для импорта в диспетчер подключений: @import './src/less/blocks/good-info.less';
+
+.good-info {
+  padding: 20px 0 80px;
+
+  &__inner {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-direction: row;
+    @media (min-width: @screen-xs) and (max-width: @screen-md) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__block {
+    flex-basis: 50%;
+    padding: 0 20px;
+
+    &:first-of-type {
+      padding: 0;
+    }
+    @media (min-width: @screen-sm) and (max-width: @screen-md) {
+      flex-basis: 100%;
+    }
+    @media (min-width: @screen-xs) and (max-width: @screen-sm) {
+      flex-basis: 100%;
+      padding: 0;
+    }
+  }
+
+  &__features-item {
+    padding: 10px 0;
+    list-style-type: none;
+    width: 100%;
+  }
+
+  &__features-text {
+    font-size: 16px;
+    color: @black-color;
+    font-weight: bold;
+    width: 50%;
+    display: inline-block;
+
+    &:first-child {
+      color: @gray-color;
+      font-size: 16px;
+      font-weight: normal;
+    }
+  }
+
+  &__features-phone {
+    font-size: 16px;
+    color: @black-color;
+    font-weight: bold;
+    width: 50%;
+    display: inline-block;
+    text-align: right;
+    padding-right: 10px;
+  }
+
+  &__features-btn {
+    .btn_yellow;
+    @media (min-width: @screen-xs) and (max-width: @screen-sm) {
+      width: 200px;
+    }
+  }
+
+  &__features-item--phone {
+    .good-info__features-phone {
+      @media (min-width: @screen-xs) and (max-width: @screen-sm) {
+        width: 20%;
+      }
+    }
+    .good-info__features-text {
+      @media (min-width: @screen-xs) and (max-width: @screen-sm) {
+        width: 80%;
+      }
+    }
+  }
+}

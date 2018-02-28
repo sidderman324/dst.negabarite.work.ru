@@ -1,0 +1,66 @@
+// Для импорта в диспетчер подключений: @import './src/less/blocks/gallery.less';
+
+.gallery {
+  &__big-wrapper {
+    // width: 590px;
+    margin-bottom: 10px;
+    text-align: center;
+
+  }
+
+  &__big {
+    width: 100%;
+    height: 360px;
+    @media (min-width: @screen-sm) and (max-width: @screen-md) {
+      width: 80%;
+      height: 360px;
+    }
+    @media (min-width: @screen-xs) and (max-width: @screen-sm) {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__nav-wrapper {
+    // width: 590px;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @media (min-width: @screen-xs) and (max-width: @screen-sm) {
+      height: 360px;
+      display: none;
+    }
+
+    button {
+      display: none;
+    }
+  }
+
+  &__slide {
+    min-height: 1px;
+    min-width: 1px;
+  }
+
+  &__nav {
+    margin: 1%;
+    width: 31%;
+    height: 100%;
+
+    &:last-of-type {
+      margin-right: auto;
+    }
+    @media (min-width: @screen-sm) and (max-width: @screen-md) {
+      width: 10%;
+    }
+    @media (min-width: @screen-xs) and (max-width: @screen-sm) {
+      width: 180px;
+      height: 120px;
+      margin: 0;
+      display: inline-block;
+      margin: auto;
+    }
+  }
+}

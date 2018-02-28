@@ -1,0 +1,62 @@
+// Для импорта в диспетчер подключений: @import './src/less/blocks/consult.less';
+
+
+.consult {
+  padding-top: 70px;
+  padding-bottom: 80px;
+  background-color: @light-gray-color;
+  &__inner {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  &__title-wrapper {
+    padding-left: 110px;
+    margin-right: 350px;
+    @media (min-width: @screen-md) and (max-width: @screen-lg) {
+      padding-left: 70px;
+    }
+    @media (min-width: @screen-sm) and (max-width: @screen-md) {
+      padding-left: 0;
+    }
+    @media (min-width: @screen-xs) and (max-width: @screen-sm) {
+      padding-left: 0;
+      flex: 100%;
+    }
+  }
+  &__text {
+    padding-left: 110px;
+    margin-top: 30px;
+    font-size: 16px;
+    color: @black-color;
+    @media (min-width: @screen-md) and (max-width: @screen-lg) {
+      padding-left: 70px;
+    }
+    @media (min-width: @screen-sm) and (max-width: @screen-md) {
+      padding-left: 0;
+    }
+    @media (min-width: @screen-xs) and (max-width: @screen-sm) {
+      padding-left: 0;
+      flex: 100%;
+    }
+  }
+  &__title {
+    .spec_title;
+  }
+  &__subtitle {
+    .spec_subtitle;
+  }
+  &__btn {
+    .btn_yellow;
+
+    @media (min-width: @screen-xs) and (max-width: @screen-sm) {
+      width: 200px;
+      height: 40px;
+      line-height: 35px;
+      margin-top: 20px;
+      margin-right: auto;
+    }
+  }
+}

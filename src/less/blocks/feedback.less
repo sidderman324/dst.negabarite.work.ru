@@ -1,0 +1,60 @@
+// Для импорта в диспетчер подключений: @import './src/less/blocks/feedback.less';
+
+
+.feedback {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+  @media (min-width: @screen-xs) and (max-width: @screen-sm) {
+    display: none;
+  }
+
+  &__btn {
+    .btn_transparent;
+  }
+
+  &__contact {
+    margin-left: 62px;
+  }
+
+  &__phone {
+    font-size: 16px;
+    color: @black-color;
+    display: block;
+    text-decoration: none;
+    position: relative;
+    &:before {
+      content: '';
+      display: inline-block;
+      background-image: url('/img/icon_phone-black.png');
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: -25px;
+      width: 17px;
+      height: 17px;
+      background-size: contain;
+    }
+  }
+  &__mail {
+    font-size: 16px;
+    color: @black-color;
+    disp  lay: block;
+    text-decoration: none;
+    position: relative;
+    &:before {
+      content: '';
+      display: inline-block;
+      background-image: url('/img/icon_mail-1-black.png');
+      position: absolute;
+      top: 65%;
+      transform: translateY(-50%);
+      left: -25px;
+      width: 17px;
+      height: 17px;
+      background-size: contain;
+    }
+  }
+}

@@ -1,0 +1,76 @@
+// Для импорта в диспетчер подключений: @import './src/less/blocks/trall.less';
+
+
+.trall {
+  background-color: @light-gray-color;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  position: relative;
+  padding-left: 8%;
+
+  @media (min-width: @screen-sm) and (max-width: @screen-md) {
+    padding: 40px 0 50px 0;
+  }
+  @media (min-width: @screen-xs) and (max-width: @screen-sm) {
+    padding: 20px 0 30px 0;
+
+    .logo {
+      display: none;
+    }
+  }
+  &__inner {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__btn {
+    .btn_yellow;
+    width: 300px;
+    position: absolute;
+    left: 50%;
+    bottom: -20px;
+    transform: translatex(-50%);
+    @media (min-width: @screen-xs) and (max-width: @screen-sm) {
+      width: 250px;
+    }
+  }
+  &__info {
+    margin-left: 100px;
+    width: 80%;
+    background-image: url('/img/trall.png');
+    background-repeat: no-repeat;
+    background-position: right;
+
+    @media (min-width: @screen-xs) and (max-width: @screen-sm) {
+      margin-left: 0;
+      background: none;
+      text-align: center;
+      width: 100%;
+    }
+  }
+  &__title {
+    font-size: 18px;
+    color: @black-color;
+    margin: 0;
+    line-height: 24px;
+    @media (min-width: @screen-xs) and (max-width: @screen-sm) {
+      font-size: 16px;
+    }
+  }
+  &__text {
+    font-size: 16px;
+    color: @black-color;
+    margin-top: 20px;
+    line-height: 20px;
+    text-align: left;
+    width: 80%;
+    @media (min-width: @screen-xs) and (max-width: @screen-sm) {
+      font-size: 14px;
+      width: 100%;
+    }
+  }
+}

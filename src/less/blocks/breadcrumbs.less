@@ -1,0 +1,48 @@
+// Для импорта в диспетчер подключений: @import './src/less/blocks/breadcrumbs.less';
+
+.breadcrumbs {
+  padding: 45px 0;
+  @media (min-width: @screen-xs) and (max-width: @screen-sm) {
+    padding: 25px 0;
+  }
+
+  &__inner {
+    padding: 0 100px 0px 100px;
+
+    @media (min-width: @screen-md) and (max-width: @screen-lg) {
+      padding: 0 80px 0px 80px;
+    }
+    @media (min-width: @screen-xs) and (max-width: @screen-md) {
+      padding: 0;
+      padding-bottom: 20px;
+    }
+  }
+
+  &__link {
+    font-size: 14px;
+    color: @gray-color;
+    // text-decoration: none;
+    padding-right: 15px;
+    position: relative;
+
+    &:after {
+      content: '';
+      display: inline-block;
+      color: @gray-color;
+      position: absolute;
+      height: 6px;
+      width: 6px;
+      bottom: 5px;
+      right: 5px;
+      transform: rotate(45deg);
+      border-right: 1px solid @gray-color;
+      border-top: 1px solid @gray-color;
+    }
+  }
+
+  &__current {
+    font-size: 14px;
+    color: @gray-color;
+    text-decoration: none;
+  }
+}
